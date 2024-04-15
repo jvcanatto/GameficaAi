@@ -1,0 +1,192 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(Montserrat-VariableFont_wght.ttf);
+}
+
+:root {
+    --roxo-gamifica: #47208b;
+    --laranja-gamifica: #f06638;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container-grid {
+    width: 80vw;
+    max-width: 1400px;
+
+    /*margin: 20px - Espaçamento externo de 20 px */
+    /*margin: 20px 10 px - Espaçamento 20px na vertical, 10 px na horizontal */
+    /*margin: 20px 10px 5px - Espaçamento 20px para cima, 10px na horizontal, 5px para baixo */
+    /*margin: 20px 10px 5px 2px = Espaçamento 20 px para cima, 10px para direita, 5 px para baixo, 2px para a esquerda */
+
+    margin: 0 auto;
+}
+
+.banner {
+    /*vh é a porcentagem da ALTURA da tela*/
+    /*vw é a porcentagem ds LARGURA da tela*/
+    height: 100vh;
+
+    background-image: linear-gradient(90deg, rgba(53, 24, 104, 1) 0%, rgba(53, 24, 104, 0.8) 100%), url(img/bg-room.png);
+    background-repeat: no-repeat;
+    
+    background-position: 165% 40%;
+}
+
+header {
+    height: 165px;
+}
+
+header img {
+    width: 234px;
+}
+
+header .container-grid {
+    height: 100%;
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.menu {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu a{
+    font-size: 18px;
+
+    font-family: 'anta';
+
+    color: white;
+   
+    text-decoration: underline transparent;
+
+    text-decoration-thickness: 2px;
+
+    transition: text-decoration 500ms ease;
+
+}
+.menu a:hover {
+    text-decoration-color: white;
+} 
+
+.conteudo-banner{
+height: calc(100vh - 280px);
+
+display: flex;
+align-items: center;
+
+}
+
+.conteudo-banner p {
+    color: white;
+    font-family: "Anta";
+    font-size: 32px;
+}
+
+#Sobre {
+    height: 800px;
+    padding: 100px 25%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+h2{
+    font-family: "Anta";
+    font-size: 28px;
+}
+
+#Sobre p{
+    font-family: "Montserrat";
+    font-size: 17px;
+    
+    text-align: left;
+
+    line-height: 1,5;
+}
+
+#cases {
+    text-align: center;
+
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+}
+
+#cases h2 {
+    margin-bottom: 70px;
+}
+
+.container-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    height: 400px;
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+
+    background-color: var(--roxo-gamifica);
+
+    border-radius: 4px;
+
+}
+
+.card img {
+    height: 55%;
+    width: 100%;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.card p {
+    color: white;
+
+    font-family: "Montserrat";
+    font-size: 16px;
+
+    padding: 7%;
+}
+
+.card button {
+    width: 90%;
+    height: 40px;
+
+    background-color: var(--laranja-gamifica);
+
+    border: none;
+    border-radius: 4%;
+
+    color: white;
+
+    font-family: "Montserrat";
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 500ms ease;
+    
+}
+
+.card button:hover {
+    background-color: #ad4929;
+}
