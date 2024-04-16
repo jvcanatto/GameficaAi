@@ -13,7 +13,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 .container-grid {
@@ -32,10 +31,8 @@
     /*vh é a porcentagem da ALTURA da tela*/
     /*vw é a porcentagem ds LARGURA da tela*/
     height: 100vh;
-
     background-image: linear-gradient(90deg, rgba(53, 24, 104, 1) 0%, rgba(53, 24, 104, 0.8) 100%), url(img/bg-room.png);
     background-repeat: no-repeat;
-    
     background-position: 165% 40%;
 }
 
@@ -49,7 +46,6 @@ header img {
 
 header .container-grid {
     height: 100%;
-
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -62,17 +58,11 @@ header .container-grid {
 }
 .menu a{
     font-size: 18px;
-
     font-family: 'anta';
-
     color: white;
-   
     text-decoration: underline transparent;
-
     text-decoration-thickness: 2px;
-
     transition: text-decoration 500ms ease;
-
 }
 .menu a:hover {
     text-decoration-color: white;
@@ -80,10 +70,8 @@ header .container-grid {
 
 .conteudo-banner{
 height: calc(100vh - 280px);
-
 display: flex;
 align-items: center;
-
 }
 
 .conteudo-banner p {
@@ -95,7 +83,6 @@ align-items: center;
 #Sobre {
     height: 800px;
     padding: 100px 25%;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -111,15 +98,12 @@ h2{
 #Sobre p{
     font-family: "Montserrat";
     font-size: 17px;
-    
     text-align: left;
-
     line-height: 1,5;
 }
 
 #cases {
     text-align: center;
-
     padding-bottom: 100px;
     margin-bottom: 100px;
 }
@@ -136,19 +120,15 @@ h2{
 .card {
     height: 400px;
     width: 250px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
     padding-bottom: 20px;
     margin-bottom: 40px;
-
     background-color: var(--roxo-gamifica);
-
     border-radius: 4px;
-
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
 }
 
 .card img {
@@ -159,34 +139,56 @@ h2{
 
 .card p {
     color: white;
-
     font-family: "Montserrat";
     font-size: 16px;
-
+    text-align: left;
     padding: 7%;
 }
 
 .card button {
     width: 90%;
     height: 40px;
-
     background-color: var(--laranja-gamifica);
-
     border: none;
     border-radius: 4%;
-
     color: white;
-
     font-family: "Montserrat";
     font-size: 17px;
     font-weight: 600;
-
     cursor: pointer;
-
-    transition: background-color 500ms ease;
-    
+    transition: background-color 500ms ease;   
 }
 
 .card button:hover {
     background-color: #ad4929;
+}
+
+#portfolio {
+    height: 250px;
+    background-image: url(img/bonecos.png);
+    background-size: 250px;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.filtro {
+    width: 100%;
+    height: 100%;
+    background-color: #47208bc2;
+    position: absolute;
+    top: 0%;
+}    
+
+#portfolio .container-grid {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#portfolio a {
+    color: white;
+    font-family: "Anta";
+    font-size: 28px;
+    z-index: 0;
 }
