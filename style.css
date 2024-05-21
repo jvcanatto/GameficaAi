@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Montserrat";
-    src: url(Montserrat-VariableFont_wght.ttf);
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
 }
 
 :root {
@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 html {
@@ -23,20 +24,22 @@ html {
     width: 80vw;
     max-width: 1400px;
 
-    /*margin: 20px - Espaçamento externo de 20 px */
-    /*margin: 20px 10 px - Espaçamento 20px na vertical, 10 px na horizontal */
-    /*margin: 20px 10px 5px - Espaçamento 20px para cima, 10px na horizontal, 5px para baixo */
-    /*margin: 20px 10px 5px 2px = Espaçamento 20 px para cima, 10px para direita, 5 px para baixo, 2px para a esquerda */
+    /* margin: 20px - Espaçamento externo de 20px */
+    /* margin: 20px 10px - Espaçamento 20px na vertical, 10px na horizontal */
+    /* margin: 20px 10px 5px - Espaçamento 20px para cima, 10px na horizontal, 5px para baixo */
+    /* margin: 20px 10px 5px 2px - Espaçamento 20px para cima, 10px para a direita, 5px para baixo, 2px para a esquerda */
 
     margin: 0 auto;
 }
 
 .banner {
-    /*vh é a porcentagem da ALTURA da tela*/
-    /*vw é a porcentagem ds LARGURA da tela*/
+    /* vh é a porcentagem da ALTURA da tela */
+    /* vw é a porcentagem da LARGURA da tela */
     height: 100vh;
+
     background-image: linear-gradient(90deg, rgba(53, 24, 104, 1) 0%, rgba(53, 24, 104, 0.8) 100%), url(img/bg-room.png);
     background-repeat: no-repeat;
+
     background-position: 165% 40%;
 }
 
@@ -54,66 +57,80 @@ header img {
 
 header .container-grid {
     height: 100%;
+
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
 
 .menu {
     width: 700px;
+
     display: flex;
     justify-content: space-between;
 }
-.menu a{
+
+.menu a {
     font-size: 18px;
-    font-family: 'anta';
+    font-family: 'Anta';
+
     color: white;
+
     text-decoration: underline transparent;
     text-decoration-thickness: 2px;
+
     transition: text-decoration 500ms ease;
 }
+
 .menu a:hover {
     text-decoration-color: white;
-} 
+}
 
-.conteudo-banner{
-height: calc(100vh - 280px);
-display: flex;
-align-items: center;
+.conteudo-banner {
+    height: calc(100vh - 280px);
+
+    display: flex;
+    align-items: center;
 }
 
 .conteudo-banner p {
     color: white;
+
     font-family: "Anta";
     font-size: 32px;
 }
 
 .conteudo-banner span {
     display: block;
+
     overflow: hidden;
+
     border-right: 5px solid var(--laranja-gamifica);
     white-space: nowrap;
-    animation: 
+
+    animation:
         digitando 2s steps(40, end),
-        cursor 0.75s step-end infinite
-    ;
+        cursor 0.75s step-end infinite;
 }
 
 @keyframes digitando {
     from {
         width: 0;
     }
+
     to {
         width: 100%;
     }
 }
 
 @keyframes cursor {
+
     from,
     to {
         border-color: transparent;
     }
-    50%{
+
+    50% {
         border-color: var(--laranja-gamifica);
     }
 }
@@ -121,27 +138,31 @@ align-items: center;
 #sobre {
     height: 800px;
     padding: 100px 25%;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: "Montserrat";
+
     text-align: center;
 }
 
-h2{
+h2 {
     font-family: "Anta";
     font-size: 28px;
 }
 
-#sobre p{
+#sobre p {
     font-family: "Montserrat";
     font-size: 17px;
+
     text-align: left;
-    line-height: 1,5;
+
+    line-height: 1.5;
 }
 
 #cases {
     text-align: center;
+
     padding-bottom: 100px;
     margin-bottom: 100px;
 }
@@ -158,43 +179,58 @@ h2{
 .card {
     height: 400px;
     width: 250px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
     padding-bottom: 20px;
     margin-bottom: 40px;
+
     background-color: var(--roxo-gamifica);
+
     border-radius: 4px;
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .card img {
     height: 55%;
     width: 100%;
+
     border-radius: 4px 4px 0px 0px;
 }
 
 .card p {
     color: white;
+
     font-family: "Montserrat";
     font-size: 16px;
+
     text-align: left;
+
     padding: 7%;
 }
 
 .card button {
     width: 90%;
     height: 40px;
+
     background-color: var(--laranja-gamifica);
+
     border: none;
-    border-radius: 4%;
+    border-radius: 4px;
+
     color: white;
+
     font-family: "Montserrat";
     font-size: 17px;
     font-weight: 600;
+
     cursor: pointer;
-    transition: background-color 500ms ease;   
+
+    transition: background-color 500ms ease;
 }
 
 .card button:hover {
@@ -203,23 +239,31 @@ h2{
 
 #portfolio {
     height: 250px;
+
     background-image: url(img/bonecos.png);
     background-size: 250px;
+
     background-attachment: fixed;
+
     position: relative;
+
     margin-bottom: 120px;
 }
 
 .filtro {
     width: 100%;
     height: 100%;
+
     background-color: #47208bc2;
+
     position: absolute;
-    top: 0%;
-}    
+    top: 0;
+    left: 0;
+}
 
 #portfolio .container-grid {
     height: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -227,10 +271,14 @@ h2{
 
 #portfolio a {
     width: fit-content;
+
     color: white;
+
     font-family: "Anta";
     font-size: 28px;
-    z-index: 0;
+
+    z-index: 1;
+
     transition: 200ms;
 }
 
@@ -241,6 +289,7 @@ h2{
 
 #contato {
     text-align: center;
+
     padding-bottom: 100px;
     margin-bottom: 100px;
 }
@@ -250,69 +299,89 @@ h2{
 }
 
 #contato form {
-    background-color: var(--roxo-gamifica);
-    font-family: "Montserrat";
-    font-size: 17px;
-    color: white;
     width: 50%;
+
     margin: 0 auto;
     padding: 60px 0;
-    border-radius: 80px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-} 
+
+    border-radius: 80px;
+    background-color: var(--roxo-gamifica);
+
+    color: white;
+    font-family: "Montserrat";
+    font-size: 17px;
+}
 
 .campo {
     width: 60%;
+
     text-align: left;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     margin-bottom: 50px;
 }
- 
+
 .campo-descricao {
     width: 60%;
+
     text-align: left;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     margin-bottom: 30px;
 }
 
 .campo input {
     height: 40px;
+
     color: white;
     background-color: #351868;
+
     border: none;
     border-radius: 4px;
+
     text-indent: 10px;
+
     outline: none;
 }
 
 .campo-descricao textarea {
     color: white;
     background-color: #351868;
+
     border: none;
     border-radius: 4px;
+
     outline: none;
+
     padding: 10px;
+
     resize: none;
 }
 
-.campo label, .campo-descricao label {
+.campo label,
+.campo-descricao label {
     margin-bottom: 15px;
 }
 
-.campo input, .campo-descricao textarea {
+.campo input,
+.campo-descricao textarea {
     font-family: "Montserrat";
     font-size: 17px;
 }
 
 .campo input::placeholder,
 .campo-descricao textarea::placeholder {
-    color: #b9b9b9;
+    color: #a0a0a0;
 }
 
 .campo input:focus,
@@ -323,15 +392,22 @@ h2{
 #contato form button {
     height: 40px;
     width: 60%;
+
     background-color: var(--laranja-gamifica);
     color: white;
+
     border: none;
     border-radius: 4px;
+
     font-size: 17px;
     font-family: "Montserrat";
-    font-weight: 700; /* Bold */
+    font-weight: 700;
+    /* Bold */
+
     text-transform: uppercase;
+
     cursor: pointer;
+
     transition: background-color 500ms;
 }
 
@@ -341,11 +417,13 @@ h2{
 
 footer {
     height: 290px;
+
     background-color: var(--roxo-gamifica);
 }
 
 footer .container-grid {
     height: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -353,6 +431,7 @@ footer .container-grid {
 
 .redes-sociais {
     height: 50%;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -361,23 +440,32 @@ footer .container-grid {
 
 .redes-sociais p {
     color: #fff;
+
     font-family: "Anta";
     font-size: 24px;
 }
 
 .icones-redes {
     width: 240px;
+
     display: flex;
     justify-content: space-between;
 }
 
 .icones-redes a {
     color: white;
-    transition: 500ms;
 }
 
 .icones-redes a:hover {
     color: var(--laranja-gamifica);
+}
+
+/* OK - Scroll nos links */
+/* OK - Favicon */
+/* Animação do banner */
+
+.menu-fechado {
+    display: none;
 }
 
 @media screen and (max-width: 1300px) {
@@ -387,7 +475,9 @@ footer .container-grid {
 
     header button {
         width: 50px;
+
         display: unset;
+
         background: none;
         border: none;
     }
@@ -399,10 +489,14 @@ footer .container-grid {
     nav.menu {
         height: 500px;
         width: 350px;
+
         padding: 0px 30px;
+
         flex-direction: column;
         justify-content: space-around;
-        background-color: #000000b5;
+
+        background-color: #000000da;
+
         position: absolute;
         top: 165px;
         right: 0px;
@@ -429,6 +523,7 @@ footer .container-grid {
 
     .card {
         height: 400px;
+
         flex-grow: 0;
         flex-shrink: 0;
         flex-basis: 40%;
@@ -456,6 +551,7 @@ footer .container-grid {
     .redes-sociais {
         align-items: center;
     }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -483,150 +579,117 @@ footer .container-grid {
         margin-bottom: unset;
     }
 
-    #portfolio a {
+    #portfolio a{
         width: 100%;
         text-align: center;
     }
 
     .campo,
     .campo-descricao,
-    #contato form button {
+    #contato form button{
         width: 75%;
     }
 }
 
-@media screen and (max-width: 520px) {
-    .container-grid {
+@media screen and (max-width: 520px){
+    .container-grid{
         width: 90%;
     }
 
-    header img {
+    header img{
         width: 200px;
     }
 
-    .banner {
+    .banner{
         background-size: cover;
     }
 
-    .conteudo-banner p {
+    .conteudo-banner p{
         font-size: 24px;
     }
 
-    nav.menu {
+    nav.menu{
         width: 100%;
+
         display: none;
     }
 
-    #sobre {
+    #sobre{
         padding-right: 0px;
         padding-left: 0px;
     }
 
-    #sobre p {
+    #sobre p{
         width: 90%;
         margin: 0 auto;
         margin-bottom: 20px;
     }
 
-    #cases.container-grid {
+    #cases.container-grid{
         width: 100%;
         margin: unset;
     }
 
-    .container-cards {
+    .container-cards{
         flex-wrap: nowrap;
+
         gap: 40px;
+
         overflow-x: auto;
     }
 
-    .card {
+    .card{
         height: 400px;
         width: 280px;
+
         flex-basis: unset;
     }
 
-    .card:first-child {
+    .card:first-child{
         margin-left: 30px;
     }
 
-    .card:last-child {
+    .card:last-child{
         margin-right: 30px;
     }
 
-    #portfolio {
+    #portfolio{
         margin-bottom: 0;
     }
 
-    #contato {
+    #contato{
         padding-top: 150px;
+
         background-color: var(--roxo-gamifica);
         color: white;
     }
 
-    #contato h2 {
+    #contato h2{
         margin-bottom: 0;
     }
 
-    #contato form {
+    #contato form{
         width: 100%;
         border-radius: 0;
     }
 }
 
-@media screen and (max-width: 400px) {
-    header img {
+@media screen and (max-width: 400px){
+    header img{
         width: 160px;
     }
 
-    header svg {
+    header svg{
         width: 40px;
     }
 
-    .conteudo-banner p {
+    .conteudo-banner p{
         font-size: 20px;
     }
 
-    footer img {
+    footer img{
         width: 200px;
     }
+
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
